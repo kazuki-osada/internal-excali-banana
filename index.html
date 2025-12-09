@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Excali Banana</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      body {
+        overscroll-behavior: none;
+        touch-action: manipulation;
+      }
+      /* Custom scrollbar for webkit */
+      ::-webkit-scrollbar {
+        width: 8px;
+        height: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+    <script>
+      // Polyfill process for libraries that expect it (like Excalidraw)
+      if (typeof process === 'undefined') {
+        window.process = { env: { NODE_ENV: 'production' } };
+      }
+    </script>
+    <script type="importmap">
+    {
+      "imports": {
+        "@google/genai": "https://aistudiocdn.com/@google/genai@^1.32.0",
+        "react": "https://aistudiocdn.com/react@18.2.0",
+        "react/": "https://aistudiocdn.com/react@18.2.0/",
+        "react-dom": "https://aistudiocdn.com/react-dom@18.2.0?deps=react@18.2.0",
+        "react-dom/client": "https://aistudiocdn.com/react-dom@18.2.0/client?deps=react@18.2.0",
+        "react-dom/": "https://aistudiocdn.com/react-dom@18.2.0/",
+        "lucide-react": "https://aistudiocdn.com/lucide-react@0.263.1?deps=react@18.2.0",
+        "@excalidraw/excalidraw": "https://aistudiocdn.com/@excalidraw/excalidraw@0.17.6?deps=react@18.2.0,react-dom@18.2.0"
+      }
+    }
+    </script>
+</head>
+  <body class="bg-gray-50 text-gray-900 overflow-hidden">
+    <div id="root"></div>
+  </body>
+</html>
